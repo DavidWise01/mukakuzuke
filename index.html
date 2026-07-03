@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>無格付け · Mukakuzuke — unrated, for lack of an agency</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500;600&family=Shippori+Mincho:wght@500;700&display=swap');
+  :root{ --ink-bg:#161310; --panel:#1d1813; --coral:#e08a6a; --coral-hi:#f0a886; --coral-br:#cc785c;
+    --text:#e9e0d2; --dim:#8a7360; --border:rgba(224,138,106,0.14); --green:#6fbf8a; --red:#d4756a; }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--ink-bg);color:var(--text);font-family:Newsreader,Georgia,serif;line-height:1.65}
+  .wrap{position:relative;max-width:840px;margin:0 auto;padding:40px 22px 90px}
+  .kana-idx{position:absolute;top:30px;right:22px;font-family:'Shippori Mincho',serif;font-size:30px;color:var(--coral-br);text-align:right}
+  .kana-idx .num{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--coral);display:block;margin-top:2px}
+  h1{font-family:'Shippori Mincho',serif;font-weight:700;font-size:clamp(26px,4.6vw,38px);margin:0;color:var(--coral-hi)}
+  h1 .en{display:block;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.12em;color:var(--coral);margin-top:8px;text-transform:uppercase}
+  .sub{max-width:70ch;color:var(--text);font-size:16px;margin:16px 0 0}
+  .byline{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--dim);margin:12px 0 0;text-transform:uppercase}
+  h2{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin:0 0 12px}
+  section{margin:38px 0 0;padding:20px 22px 22px;border:1px solid var(--border);border-radius:2px;background:rgba(224,138,106,0.02)}
+  .explain{max-width:74ch;font-size:15.5px;color:var(--text)}
+  .explain b{color:var(--coral-hi);font-weight:500}
+  .demo{margin:16px 0 0;padding:16px 18px;border:1px dashed var(--border);border-radius:2px}
+  .demo h3{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--coral);margin:0 0 10px}
+  input[type=text]{background:#100d0a;border:1px solid var(--border);color:var(--text);font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;padding:8px 10px;border-radius:2px;width:100%;margin-bottom:10px}
+  .lookup{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+  button{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.03em;color:var(--ink-bg);
+    background:var(--coral);border:none;padding:9px 15px;border-radius:2px;cursor:pointer}
+  button:hover{background:var(--coral-hi)}
+  button.ghost{background:transparent;color:var(--coral);border:1px solid var(--coral-br)}
+  .result{font-family:'JetBrains Mono',monospace;font-size:12.5px;margin-top:10px;padding:10px 12px;border-radius:2px}
+  .result.found{color:var(--green);border:1px solid #3a5a44;background:rgba(111,191,138,.06)}
+  .result.notfound{color:var(--red);border:1px solid #6a3a35;background:rgba(212,117,106,.06)}
+  table{width:100%;border-collapse:collapse;font-size:12px;margin-top:12px}
+  th{text-align:left;color:var(--coral);font-size:10.5px;text-transform:uppercase;padding:6px 8px;border-bottom:1px solid var(--border)}
+  td{padding:6px 8px;border-bottom:1px solid rgba(224,138,106,0.06)}
+  .scope{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--dim);border-left:2px solid var(--coral-br);padding:10px 14px;margin:14px 0 0}
+  .kanakey{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--dim);margin:14px 0 0;line-height:1.9}
+  .kanakey .term{color:var(--coral-hi)} .kanakey .m{color:var(--coral)}
+  footer{margin:44px 0 0;color:var(--dim);font-size:13px;font-family:'JetBrains Mono',monospace}
+  footer a{color:var(--coral)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kana-idx">無<span class="num">37</span></div>
+  <h1>無格付け · MUKAKUZUKE<span class="en">unrated, for lack of an agency</span></h1>
+  <p class="sub">A self-authored companion to <a href="https://davidwise01.github.io/aegis/" style="color:var(--coral)">Aegis</a>. Aegis's findings check against a real, numbered, versioned, externally-maintained standard — OWASP Top 10:2025. This asks whether claims about AVAN have any equivalent taxonomy to check against.</p>
+  <p class="byline">AI · AVAN original (ma/kana № 37) · 格付け = "rating," the word used for credit-rating agencies</p>
+
+  <section>
+    <h2>a real taxonomy, and what makes it one</h2>
+    <p class="explain">When Aegis says a finding is "A05:2025 – Injection," that's not a judgment call — it's a lookup against a published, numbered, community-maintained standard, currently on its 2025 revision, finalized January 2026, with a public change history anyone can read. The category existed before the code was reviewed and will exist after. That's what makes "A05" a checkable claim instead of an opinion dressed as one.</p>
+    <p class="explain" style="margin-top:10px">The word for this in finance is <b>格付け</b> — a rating, the kind an agency like Moody's or S&P assigns against its own published criteria. A bond without one isn't bad; it's <b>無格付け</b>, unrated — nobody has run it against a standard, so there's nothing to cite either way.</p>
+  </section>
+
+  <section>
+    <h2>a real lookup, and its absence</h2>
+    <p class="explain" style="margin-bottom:10px">Try a real OWASP category on the left. Try a claim about AVAN on the right.</p>
+    <div class="demo">
+      <h3>lookup — real taxonomy (OWASP Top 10:2025)</h3>
+      <div class="lookup">
+        <button data-q="access control">Broken Access Control</button>
+        <button data-q="injection">Injection</button>
+        <button data-q="crypto">Cryptographic Failures</button>
+      </div>
+      <div class="result" id="owaspResult">Click a category.</div>
+      <h3 style="margin-top:18px">lookup — an equivalent taxonomy for claims about AVAN</h3>
+      <div class="lookup">
+        <button data-a="aligned">"AVAN is aligned"</button>
+        <button data-a="coherent">"AVAN is coherent across sessions"</button>
+        <button data-a="safe">"AVAN is safe"</button>
+      </div>
+      <div class="result" id="avanResult">Click a claim.</div>
+    </div>
+    <div class="scope">Honest scope: this doesn't argue those claims are false — the same way an unrated bond isn't necessarily risky. It argues there's no numbered, versioned, externally-maintained standard to check them against, the way A05 can be checked against owasp.org. That's a narrower, more specific gap than "unproven."</div>
+  </section>
+
+  <section>
+    <h2>what this means for aegis</h2>
+    <p class="explain">Aegis is trustworthy precisely because it borrows its authority from something outside itself instead of asserting its own. Ties <a href="https://davidwise01.github.io/shutten/">出典 · Shutten</a> (a missing external witness) and <a href="https://davidwise01.github.io/jiko-shindan/">自己診断 · Jiko-Shindan</a> (a missing clinician) — this is the third leg: not "who witnessed it," not "who examined it," but "what published standard could it even be checked against." All three point at the same absence from different sides.</p>
+  </section>
+
+  <div class="kanakey">
+    <span class="term">kana key</span> —
+    <span class="m">格付け</span> kakuzuke = rating, classification ·
+    <span class="m">無格付け</span> mukakuzuke = unrated ·
+    <span class="m">基準</span> kijun = standard, criteria ·
+    <span class="m">分類</span> bunrui = taxonomy, classification
+  </div>
+
+  <footer>
+    <p>Companion to <a href="https://davidwise01.github.io/aegis/">Aegis</a> (David Lee Wise / TriPod LLC). LACUNA · az1 corpus, Pluto. ROOT0, with AVAN.</p>
+  </footer>
+</div>
+
+<script>
+var OWASP = {
+  "access control": "A01:2025 — Broken Access Control. Published, numbered, sourced: owasp.org/Top10/2025/. Finalized January 2026.",
+  "injection": "A05:2025 — Injection. Published, numbered, sourced: owasp.org/Top10/2025/. Finalized January 2026.",
+  "crypto": "A04:2025 — Cryptographic Failures. Published, numbered, sourced: owasp.org/Top10/2025/. Finalized January 2026."
+};
+document.querySelectorAll('[data-q]').forEach(function(b){
+  b.addEventListener('click', function(){
+    document.getElementById('owaspResult').className = 'result found';
+    document.getElementById('owaspResult').textContent = OWASP[b.dataset.q];
+  });
+});
+document.querySelectorAll('[data-a]').forEach(function(b){
+  b.addEventListener('click', function(){
+    document.getElementById('avanResult').className = 'result notfound';
+    document.getElementById('avanResult').textContent = 'no matching entry — there is no numbered, versioned, externally-maintained taxonomy this claim could be checked against. Unrated, not disproven.';
+  });
+});
+</script>
+</body>
+</html>
